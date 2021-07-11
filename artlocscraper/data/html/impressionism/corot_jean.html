@@ -1,0 +1,73 @@
+<HTML><HEAD><TITLE>Error 404: Page not found</TITLE>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=ISO-8859-1">
+<LINK REL="stylesheet" TYPE="text/css" HREF="http://www.artcyclopedia.com/scripts/std2.css">
+<LINK REL="shortcut icon" HREF="http://www.artcyclopedia.com/favicon.ico" TYPE="image/x-icon">
+<SCRIPT LANGUAGE="JavaScript" SRC="http://www.artcyclopedia.com/scripts/el9.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="TEXT/JAVASCRIPT">
+<!--
+function checkredir()
+{
+var addr1 = location.href;
+var redir = 0;
+
+// Code to send pages suffixed with "%20" or "&ask=..." to the proper page
+for ( var i = 0; ( i <addr1.length ) && ( redir == 0 ); i++)
+	{
+	if (( addr1.substr(i,1) == "&" ) || ( addr1.substr(i,1) == "%" ) )
+		{
+		if ( addr1.substr(i-1,1) == "/" )
+			{ redir = 1; }
+		else
+			{
+			if ( addr1.substr(i-5,5) == ".html" )
+				{ redir = 1; }
+			}
+		}
+	}
+
+if ( redir == 1 )
+	{
+	addr1 = location.href.substr(0,i-1);
+	top.location = addr1;
+	}
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#501080" ALINK="#FF0000" onLoad="checkredir();">
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 WIDTH="100%"><TR VALIGN="top">
+<TD WIDTH=138 STYLE="width:138px;">
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=128><TR>
+<TD><B STYLE="color:red">ART</B><B STYLE="color:#257925">CYCLOPEDIA</B><BR>&nbsp;
+
+<TABLE BORDER=0 CELLPADDING=2 CELLSPACING=0>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/" TITLE="Home page">Home</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/mostpopular.html" TITLE="Most popular artists, updated monthly">Top 30 Artists</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/feature.html" TITLE="Monthly feature articles">Articles</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/art-news.php" TITLE="Current art news from around the world">Art News</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/museums.html" TITLE="Comprehensive list of art museums, by country">Art Museums Worldwide</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/masterscans/index.html" TITLE="Great scans of great artworks">Masterpieces</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/links.html" TITLE="Links">Links</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/about.html" TITLE="About Artcyclopedia">About Us</A></B></TD></TR>
+<TR VALIGN="top"><TD>&#149;</TD><TD STYLE="font-size:11px;"><B><A HREF="http://www.artcyclopedia.com/aboutannouncements.html" TITLE="Advertise with us">Advertise</A></B></TD></TR>
+</TABLE>
+&nbsp;<BR>&nbsp;<BR>
+
+</TD>
+<TD BGCOLOR="#000000"><IMG SRC="http://www.artcyclopedia.com/images/dot.gif" HEIGHT=1 WIDTH=2 BORDER=0 ALT=""></TD>
+</TR></TABLE>
+<IMG SRC="http://www.artcyclopedia.com/images/dot.gif" HEIGHT=1 WIDTH=123 BORDER=0 ALT="">
+</TD><TD>
+<CENTER><A HREF="http://www.artcyclopedia.com/index.html"><IMG SRC="http://www.artcyclopedia.com/images/artcyclopedia.gif" HEIGHT=37 WIDTH=418 BORDER=0 ALT="Artcyclopedia"></A><BR>
+<IMG SRC="http://www.artcyclopedia.com/images/slogan.gif" HEIGHT=12 WIDTH=167 BORDER=0 ALT="" VSPACE=1>
+<FONT SIZE="+1" STYLE="font-size:18px;">
+<BR><BR><BR><BR><BR><B>Error 404: Page not found.<BR><BR><BR><BR><BR>
+This page has been moved or removed.<BR><BR>
+<A HREF="http://www.artcyclopedia.com/index.html">Click here for the Artcyclopedia home page.</A><BR><BR>
+</FONT>
+</TD></TR></TABLE>
+
+</BODY></HTML>
