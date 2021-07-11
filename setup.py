@@ -12,7 +12,7 @@ setup(
     author='Meng-Ying Lin',
     author_email='',
     packages=find_packages(),
-    url='https://github.com/yingha/movierecommender',
+    url='https://github.com/yingha/artlocscraper',
     license='MIT',
     classifiers=[
         'Programming Language :: Python :: 3.8',
