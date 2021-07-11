@@ -26,9 +26,9 @@ setup(
     install_requires=[
         'pandas',
         'requests',
-        'time',
-        're',
-        'os',
+        #'time',
+        #'re',
+        #'os',
         'tqdm',
         'bs4'
     ],
