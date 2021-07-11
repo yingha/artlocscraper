@@ -7,7 +7,7 @@ def open_file(fname):
 
 
 setup(
-    name='movierecommender',
+    name='artlocscraper',
     version='0.0.1',
     author='Meng-Ying Lin',
     author_email='',
