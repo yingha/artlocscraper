@@ -1,6 +1,6 @@
 import argparse
 import pandas as pd
-from utils import make_url, get_content, extract_artist_urls, get_artist_content, extract_museum_list
+from artlocscraper.utils import make_url, get_content, extract_artist_urls, get_artist_content, extract_museum_list
 from geopy.geocoders import Nominatim
 
 parser = argparse.ArgumentParser(description='scrape museum list of the artist based on art style from artcyclopedia.com and output a csv file in ./data/')
