@@ -1,6 +1,7 @@
 import argparse
 import pandas as pd
 from utils import make_url, get_content, extract_artist_urls, get_artist_content, extract_museum_list
+from geopy.geocoders import Nominatim
 
 parser = argparse.ArgumentParser(description='scrape museum list of the artist based on art style from artcyclopedia.com and output a csv file in ./data/')
 parser.add_argument('subject', help='art stlye to scrape, eg. "cubism"')
@@ -32,7 +33,31 @@ if args.verbosity:
     print(f'save {args.subject} museum list as csv file')
 
 df = pd.DataFrame(museum_list,columns=['artist','style','museum_name','museum_location','museum_link']) 
-df = df.drop_duplicates()
+
+# Get the lat and lon of museums
+lats = []
+lons = []
+
+for name in df['museum_name']:
+    loc = Nominatim(user_agent="my_map").geocode(f'{name}')
+    try:
+        df_loc = pd.DataFrame(loc.raw)
+        df_loc.drop([1,2,3], inplace=True)
+        lat = float(df_loc['lat'][0])
+        lon = float(df_loc['lon'][0])
+    except AttributeError:
+        print('can not find it on map')
+        lat = 0.0
+        lon = 0.0      
+    lats.append(lat)
+    lons.append(lon)
+
+df.insert(3, "lat", lats, True)
+df.insert(4, "lon", lons, True)
+
+# delete duplicates
+df = df.drop_duplicates(subset=['artist','museum_name'], keep="first")
+
 df.to_csv(f'./data/{args.subject}_museum_list.csv')
 
 print('done')
